@@ -5,10 +5,16 @@
 ## 1. 目录结构
 
 ```bash
-cuda/
-├── README.md              # 本文件，CUDA 核心概念总览
-├── cuda_cores_cn.md       # 深入了解 Nvidia CUDA 核心
-└── cuda_streams.md        # CUDA 流详细介绍
+CUDA/
+├── README.md                                    # 本文件，CUDA 核心概念总览
+├── cuda_cores_cn.md                            # 深入了解 Nvidia CUDA 核心
+├── cuda_streams.md                             # CUDA 流详细介绍
+├── gpu_programming_introduction.md             # GPU 架构与编程入门
+├── CUDA 编程简介 - 基础与实践.pdf              # CUDA 编程基础与实践 PDF 教程
+├── Professional-CUDA-C-Programming/            # 专业 CUDA C 编程参考代码
+│   ├── CodeSamples/                            # 代码示例
+│   └── Solutions/                              # 练习解答
+└── img/                                        # 相关图片资源
 ```
 
 ## 2. CUDA 核心概念概述
@@ -594,9 +600,83 @@ cublasDestroy(handle);
 
 ---
 
-## 5. 参考资源
+## 5. 核心文档详解
 
-### 5.1 官方文档
+### 5.1 CUDA 核心详解
+
+**[深入了解 Nvidia CUDA 核心](cuda_cores_cn.md)** - 深度解析 CUDA 核心的架构、功能和性能特性
+
+**主要内容：**
+- CUDA 核心的架构设计和工作原理
+- CUDA 核心与传统 CPU 核心的对比
+- GPU 架构的演变历史
+- CUDA 核心在不同行业的应用
+- 性能特征和优化策略
+
+### 5.2 CUDA 流详解
+
+**[CUDA 流详细介绍](cuda_streams.md)** - 深入理解 CUDA 流的并发执行机制
+
+**主要内容：**
+- CUDA 流的基本概念和定义
+- 串行模型与并发模型的对比
+- 默认流与非默认流的使用
+- 多流并发执行的实现方法
+- 性能优化策略和最佳实践
+
+### 5.3 GPU 架构与编程入门
+
+**[GPU 架构与编程入门](gpu_programming_introduction.md)** - GPU 架构和编程基础理论指导
+
+**主要内容：**
+- GPU 架构基础 - GPU 硬件架构和设计原理
+- 并行计算概念 - GPU 并行计算核心概念（SIMT 架构）
+- 线程层次结构 - Warps、Thread Blocks、Grid 的组织方式
+- 内存层次结构 - 全局内存、共享内存、寄存器的使用
+- CUDA 编程实践 - CUDA 并行编程模型
+- 性能优化技巧 - GPU 程序性能优化方法
+
+**核心概念：**
+- **Warps/Wavefronts** - 32 个线程的同步执行单元
+- **Thread Blocks** - 多个 Warp 的组合，共享内存和同步
+- **Grid** - 线程块的集合，构成完整的 CUDA 内核
+- **SIMT 架构** - 单指令多线程执行模式
+
+### 5.4 CUDA 编程基础与实践
+
+**[CUDA 编程简介 - 基础与实践.pdf](CUDA%20编程简介%20-%20基础与实践.pdf)** - 完整的 CUDA 编程教程
+
+**主要内容：**
+- CUDA 编程基础概念
+- 内存管理和数据传输
+- 内核函数编写和优化
+- 实际应用案例
+- 性能调优技巧
+
+### 5.5 专业 CUDA C 编程
+
+**[Professional-CUDA-C-Programming/](Professional-CUDA-C-Programming/)** - 专业 CUDA C 编程参考代码
+
+**主要内容：**
+- **CodeSamples/** - 完整的代码示例集合
+  - 涵盖 CUDA 编程的各个方面
+  - 从基础到高级的实践案例
+  - 性能优化示例
+- **Solutions/** - 练习解答
+  - 配套练习题的完整解答
+  - 最佳实践参考
+
+**学习价值：**
+- 系统学习 CUDA C 编程
+- 理解专业级代码实现
+- 掌握性能优化技巧
+- 学习最佳实践模式
+
+---
+
+## 6. 参考资源
+
+### 6.1 官方文档
 
 **核心文档：**
 
@@ -611,7 +691,7 @@ cublasDestroy(handle);
 - [Nsight Systems 用户指南](https://docs.nvidia.com/nsight-systems/)
 - [Nsight Compute 用户指南](https://docs.nvidia.com/nsight-compute/)
 
-### 5.2 学习资源
+### 6.2 学习资源
 
 **在线课程：**
 
@@ -631,7 +711,7 @@ cublasDestroy(handle);
 - [CUDA 教程系列](https://developer.nvidia.com/how-to-cuda-c-cpp) - 入门教程
 - [GPU 编程最佳实践](https://developer.nvidia.com/blog/cuda-pro-tip-write-flexible-kernels-grid-stride-loops/)
 
-### 5.3 代码资源
+### 6.3 代码资源
 
 **示例代码：**
 
@@ -645,7 +725,7 @@ cublasDestroy(handle);
 - [ModernGPU](https://github.com/moderngpu/moderngpu) - 现代 GPU 算法
 - [CUTLASS](https://github.com/NVIDIA/cutlass) - CUDA 模板库
 
-### 5.4 社区支持
+### 6.4 社区支持
 
 **论坛和讨论：**
 
@@ -659,7 +739,7 @@ cublasDestroy(handle);
 - [NVIDIA 开发者日](https://developer.nvidia.com/developer-days) - 地区性技术活动
 - [学术会议](https://www.nvidia.com/en-us/research/academic-partnerships/) - 研究合作
 
-### 5.5 硬件资源
+### 6.5 硬件资源
 
 **GPU 架构文档：**
 
@@ -676,7 +756,7 @@ cublasDestroy(handle);
 
 ---
 
-## 6. 总结
+## 7. 总结
 
 CUDA 作为 GPU 并行计算的重要平台，为高性能计算提供了强大的工具和框架。通过深入理解 CUDA 的核心概念、掌握编程技巧、运用最佳实践，开发者可以充分发挥 GPU 的计算潜力，在科学计算、机器学习、图像处理等领域实现显著的性能提升。
 
