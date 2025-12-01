@@ -27,6 +27,7 @@ AI-Engineering/
 ├── reinforcement-learning/     # 强化学习
 ├── training/                   # 模型训练
 ├── triton/                     # Triton GPU 编程语言
+├── xai/                        # 可解释 AI
 └── README.md                   # 项目总览文档
 ```
 
@@ -311,6 +312,30 @@ AI 数学基础的学习资料库，涵盖线性代数、概率论、微积分�
 **核心文档：**
 - [AI 数学基础](math/README.md)
 
+### 17. 可解释 AI (`xai/`)
+
+可解释 AI（Explainable AI）技术的学习资料库，涵盖模型可解释性、解释方法、公平性分析、可解释性实践等核心主题。
+
+**主要内容：**
+- **白盒模型** - 线性回归、决策树、广义加性模型（GAM）、B-样条
+- **模型无关方法 - 全局可解释性** - 树集成、部分依赖图（PDP）、特征交互
+- **模型无关方法 - 局部可解释性** - LIME、SHAP、Anchors、深度神经网络解释
+- **显著性映射** - 卷积神经网络可视化、反向传播方法、积分梯度、SmoothGrad、Grad-CAM
+- **网络层和单元理解** - 网络解剖（Network Dissection）、层可视化、单元分析
+- **语义相似性理解** - 主成分分析（PCA）、t-SNE、词嵌入可视化、语义分析
+- **公平性和偏见缓解** - 公平性分析、偏见检测、公平性指标、偏见缓解方法
+- **可解释 AI 路径** - 反事实解释、可解释性最佳实践、可解释性评估
+
+**核心文档：**
+- [可解释 AI](xai/README.md)
+- [Interpretable AI Book](xai/interpretable-ai-book/README.md) - 可解释机器学习系统构建完整教程
+
+**教程特色：**
+- **完整代码实现** - 基于《Interpretable AI》书籍的 Jupyter Notebook 实现
+- **实践导向** - 从白盒模型到黑盒模型解释的完整实践路径
+- **多方法覆盖** - 涵盖全局解释、局部解释、可视化解释等多种方法
+- **公平性分析** - 包含模型公平性分析和偏见缓解实践
+
 ## 🎯 适用人群
 
 - **AI 工程师** - 需要深入理解 GPU 计算原理、深度学习框架、LLM 应用和优化技巧
@@ -319,6 +344,7 @@ AI 数学基础的学习资料库，涵盖线性代数、概率论、微积分�
 - **高性能计算开发者** - 开发 GPU 加速的并行计算应用
 - **DevOps 工程师** - 部署和管理 GPU 集群、容器化 GPU 应用、MLOps 平台
 - **LLM 应用开发者** - 开发 RAG、Agent、提示工程等 LLM 应用
+- **可解释 AI 研究者** - 研究模型可解释性、公平性分析、解释方法
 - **研究人员** - 研究 GPU 架构、并行计算、AI 加速技术、LLM 技术
 
 ## 🔍 技术特色
@@ -346,6 +372,11 @@ AI 数学基础的学习资料库，涵盖线性代数、概率论、微积分�
 - **模型实践** - Qwen 模型使用、微调、部署
 - **工程实践** - 训练、推理、MLOps、性能优化
 - **数学基础** - AI 所需的数学知识体系
+
+### 可解释性与公平性
+- **可解释性方法** - 白盒模型、模型无关解释、显著性映射、网络解剖
+- **公平性分析** - 偏见检测、公平性指标、偏见缓解
+- **实践工具** - LIME、SHAP、Grad-CAM 等解释工具实践
 
 ## 📚 学习路径建议
 
@@ -379,6 +410,14 @@ AI 数学基础的学习资料库，涵盖线性代数、概率论、微积分�
 4. **AI 智能体** → `agent/README.md` - 开发智能体应用
 5. **Qwen 模型实践** → `qwen/README.md` - 使用和微调大语言模型
 6. **强化学习** → `reinforcement-learning/README.md` - 学习 RL 在 LLM 中的应用
+
+### 可解释 AI 路径
+1. **可解释 AI 基础** → `xai/README.md` - 了解可解释 AI 概念和方法
+2. **白盒模型** → `xai/interpretable-ai-book/Chapter_02/` - 学习线性回归、决策树、GAM
+3. **全局可解释性** → `xai/interpretable-ai-book/Chapter_03/` - 学习 PDP、特征交互
+4. **局部可解释性** → `xai/interpretable-ai-book/Chapter_04/` - 学习 LIME、SHAP、Anchors
+5. **视觉解释** → `xai/interpretable-ai-book/Chapter_05/` - 学习显著性映射、Grad-CAM
+6. **公平性分析** → `xai/interpretable-ai-book/Chapter_08/` - 学习公平性分析和偏见缓解
 
 ## 🔗 相关资源
 
