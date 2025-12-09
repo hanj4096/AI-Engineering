@@ -48,9 +48,68 @@ AI 智能体（Agent）技术的学习资料库，涵盖智能体架构、多智
 - **对话智能体** - 多轮对话、上下文理解、个性化
 - **自动化智能体** - 任务自动化、工作流编排、系统集成
 
+### 6. 智能体设计模式 (`agentic-design-patterns/`)
+
+**智能体设计模式实践指南** - 基于《Agentic Design Patterns: A Hands-On Guide to Building Intelligent Systems》的中英文对照翻译。
+
+**核心设计模式：**
+- **提示链（Prompt Chaining）** - 多步骤提示序列、链式处理、状态传递
+- **路由（Routing）** - 条件路由、智能体委托、路由策略、Auto-Flow
+- **并行化（Parallelization）** - 并行任务执行、结果合成、性能优化
+- **反思（Reflection）** - 自我评估、迭代改进、质量提升、链式反思
+- **工具使用（Tool Use）** - 函数调用、工具集成、工具链设计、Function Calling
+- **规划（Planning）** - 任务规划、目标分解、执行监控、长期规划
+- **多智能体协作** - 智能体团队、协作模式、通信协议、角色分配
+- **记忆管理** - 状态管理、会话管理、上下文维护、记忆服务
+- **适应（Adaptation）** - 动态调整、环境适应、性能优化
+- **知识检索（Knowledge Retrieval）** - RAG 集成、向量检索、知识增强
+- **异常处理与恢复** - 错误处理、回退策略、容错机制
+- **人机交互（Human-in-the-Loop）** - 人工干预、确认机制、个性化
+- **更多模式** - 目标设定、资源优化、推理技术、安全模式等
+
+**技术栈：**
+- **框架**: LangChain、LangGraph、Google ADK、CrewAI
+- **模型**: Qwen 系列（qwen-flash、qwen-turbo、qwen-plus、qwen-max）
+- **API**: 阿里云 DashScope API
+- **工具**: Jupyter Notebook、Python、异步编程
+
+**Notebook 代码示例：**
+
+项目在 `agentic-design-patterns/notebooks/` 目录中提供了各章节的 Jupyter Notebook 代码示例，**已配置为使用 Qwen 模型**：
+
+- 📔 **Chapter 1**: Prompt Chaining（提示链）
+- 📔 **Chapter 2**: Routing（路由）
+  - LangGraph Code Example
+  - Google ADK Code Example
+- 📔 **Chapter 3**: Parallelization（并行化）
+  - LangChain Code Example
+- 📔 **Chapter 4**: Reflection（反思）
+  - LangChain Code Example
+  - Iterative Loop reflection
+
+更多章节的 Notebook 示例正在持续更新中。
+
+**快速开始：**
+
+```bash
+# 安装依赖
+pip install langchain-core langchain-community dashscope python-dotenv nest-asyncio jupyter
+
+# 配置 API Key（在 .env 文件中）
+DASHSCOPE_API_KEY=your-dashscope-api-key-here
+
+# 运行 Notebook
+jupyter notebook agentic-design-patterns/notebooks/
+```
+
+**核心文档：**
+- [智能体设计模式完整指南](agentic-design-patterns/README.md)
+- [目录索引](agentic-design-patterns/00-0-Table-of-Contents.md)
+
 ## 🎯 适用人群
 
-- **AI 工程师** - 开发智能体应用、集成 AI 能力
+- **AI 工程师** - 开发智能体应用、集成 AI 能力、使用 Qwen 模型
+- **智能体开发者** - 学习智能体设计模式、开发多智能体系统
 - **系统架构师** - 设计智能体系统架构、多智能体协作
 - **产品经理** - 理解智能体能力、设计智能体产品
 - **研究人员** - 研究智能体理论、多智能体系统、自主决策
@@ -73,13 +132,18 @@ AI 智能体（Agent）技术的学习资料库，涵盖智能体架构、多智
 
 ### 入门路径
 1. **智能体基础概念** - 理解智能体的基本组成和工作原理
-2. **简单智能体实现** - 实现基础的规则驱动智能体
-3. **工具调用实践** - 学习如何集成和使用外部工具
+2. **智能体设计模式 - 提示链** → `agentic-design-patterns/notebooks/Chapter 1_ Prompt Chaining (Code Example).ipynb`
+3. **简单智能体实现** - 实现基础的规则驱动智能体
+4. **工具调用实践** - 学习如何集成和使用外部工具
 
 ### 进阶路径
-1. **多智能体系统** - 学习多智能体协作和通信
-2. **规划与决策** - 深入理解智能体的决策机制
-3. **强化学习应用** - 使用强化学习训练智能体
+1. **智能体设计模式实践** → `agentic-design-patterns/notebooks/` - 学习核心设计模式
+   - 路由（Routing）- 条件路由和智能体委托
+   - 并行化（Parallelization）- 并行任务执行
+   - 反思（Reflection）- 自我评估和改进
+2. **多智能体系统** - 学习多智能体协作和通信
+3. **规划与决策** - 深入理解智能体的决策机制
+4. **强化学习应用** - 使用强化学习训练智能体
 
 ### 高级路径
 1. **复杂系统设计** - 设计大规模多智能体系统
@@ -90,12 +154,17 @@ AI 智能体（Agent）技术的学习资料库，涵盖智能体架构、多智
 
 ### 官方文档
 - [LangChain Agents](https://python.langchain.com/docs/modules/agents/)
-- [AutoGPT Documentation](https://docs.autogpt.net/)
+- [LangGraph Documentation](https://langchain-ai.github.io/langgraph/)
+- [Google ADK Documentation](https://google.github.io/adk-docs/)
+- [CrewAI Documentation](https://docs.crewai.com/)
+- [Qwen 官方文档](https://qwen.readthedocs.io/)
+- [DashScope API 文档](https://help.aliyun.com/zh/model-studio/)
 - [OpenAI Function Calling](https://platform.openai.com/docs/guides/function-calling)
 
 ### 学习资源
 - [Multi-Agent Systems](https://www.cambridge.org/core/books/multiagent-systems/)
 - [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/)
+- [Agentic Design Patterns (原书)](https://www.amazon.com/Agentic-Design-Patterns-Hands-Intelligent/dp/3032014018/)
 
 ---
 

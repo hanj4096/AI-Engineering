@@ -228,6 +228,18 @@ AI 智能体技术的学习资料库，涵盖智能体架构、多智能体系�
 **核心文档：**
 - [AI 智能体技术](agent/README.md)
 
+**智能体设计模式** (`agent/agentic-design-patterns/`)：
+
+《Agentic Design Patterns: A Hands-On Guide to Building Intelligent Systems》的中文翻译（内容有修改），提供21个核心设计模式的完整指南。
+
+**核心设计模式：**
+- 提示链、路由、并行化、反思、工具使用、规划、多智能体协作、记忆管理、适应、知识检索、异常处理、人机交互、目标设定、资源优化、推理技术、安全模式、评估监控、优先级、探索发现等
+
+**Notebook 代码示例：**
+- 提供各章节的 Jupyter Notebook 示例（已配置 Qwen 模型）
+- 技术栈：LangChain、LangGraph、Google ADK、CrewAI + Qwen 模型
+- 快速开始：`agent/agentic-design-patterns/README.md`
+
 ### 12. 提示工程 (`prompt/`)
 
 提示工程技术的学习资料库，涵盖提示设计、优化策略、Few-shot 学习、Chain-of-Thought 等核心主题。
@@ -344,6 +356,7 @@ AI 数学基础的学习资料库，涵盖线性代数、概率论、微积分�
 - **高性能计算开发者** - 开发 GPU 加速的并行计算应用
 - **DevOps 工程师** - 部署和管理 GPU 集群、容器化 GPU 应用、MLOps 平台
 - **LLM 应用开发者** - 开发 RAG、Agent、提示工程等 LLM 应用
+- **智能体开发者** - 学习智能体设计模式、开发多智能体系统
 - **可解释 AI 研究者** - 研究模型可解释性、公平性分析、解释方法
 - **研究人员** - 研究 GPU 架构、并行计算、AI 加速技术、LLM 技术
 
@@ -369,7 +382,8 @@ AI 数学基础的学习资料库，涵盖线性代数、概率论、微积分�
 
 ### LLM 应用全栈
 - **基础技术** - 提示工程、上下文工程、RAG、Agent
-- **模型实践** - Qwen 模型使用、微调、部署
+- **智能体设计模式** - 21个核心设计模式的完整指南与实践代码
+- **模型实践** - Qwen 模型使用、微调、部署（Notebook 示例已配置）
 - **工程实践** - 训练、推理、MLOps、性能优化
 - **数学基础** - AI 所需的数学知识体系
 
@@ -437,7 +451,9 @@ AI 数学基础的学习资料库，涵盖线性代数、概率论、微积分�
 - [PyTorch 示例](https://github.com/pytorch/examples)
 - [MLflow Documentation](https://mlflow.org/docs/latest/index.html)
 - [LangChain Documentation](https://python.langchain.com/)
-- [Prompt Engineering Guide](https://www.promptingguide.ai/)
+- [LangGraph Documentation](https://langchain-ai.github.io/langgraph/)
+- [Qwen 官方文档](https://qwen.readthedocs.io/)
+- [DashScope API 文档](https://help.aliyun.com/zh/model-studio/)
 
 ### 社区支持
 - [NVIDIA 开发者论坛](https://forums.developer.nvidia.com/)
